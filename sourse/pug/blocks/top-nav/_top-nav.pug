@@ -8,20 +8,44 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
+	
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
-			+mnu()
-			.text-right
+			.container
+				.row
+					.col.mb-3
+						a.btn-ticket(href="#") Купить билеты
+					.col-auto.mb-3
+						a.btn-lang(href="#") EN
+					.col-12.mb-3
+						a.link-tel(href="tel:+74992614292") +7 499 261 42 92
+						br
+						a.link-mail(href="mailto:office@eofund.ru") office@eofund.ru
+				+mnu() 
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			+mnu()
+			.row
+				.col-lg-auto.col
+					+e.logo(href="/")
+						img(src="img/svg/logo.svg", alt="")
+				+e.menu-wrap.col.d-none.d-lg-block
+					+mnu()
+				+e.btn-wrap.col-auto.align-self-center.d-none.d-sm-block
+					a.btn-ticket(href="#") Купить билеты
+				.col-auto.align-self-center.d-none.d-lg-block
+					a.btn-lang(href="#") EN
+				+e.constants.col-auto.align-self-center.text-right.d-none.d-md-block
+					a.link-tel(href="tel:+74992614292") +7 499 261 42 92
+					br
+					a.link-mail(href="mailto:office@eofund.ru") office@eofund.ru
+				.col-auto.align-self-center.d-lg-none
+					+b.toggle-menu-mobile--js.d-lg-none
+						span
+
 					
 	// end top-nav

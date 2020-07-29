@@ -411,3 +411,19 @@ img.img-bg,
 iframe {
 	border: none;
 }
+
+
+.btn{
+	@extend .mono;
+}
+
+.page-head{
+	padding-top: rem(38);
+	padding-bottom: rem(36);
+	h1{
+		@extend .h2;
+		@extend .mono;
+		@extend .ttu;
+		letter-spacing: 0.06em;
+	}
+}

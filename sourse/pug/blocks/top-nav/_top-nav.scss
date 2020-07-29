@@ -1,33 +1,48 @@
+.page-main{
+	.top-nav {
+		&__menu-wrap{ 
+			-ms-flex: 0 0 auto;
+			flex: 0 0 auto;
+			width: auto;
+		}
+		&__constants{
+			flex: 1 0 0%;
+			width: 100%;
+		}
+	}
+
+}
 .top-nav {
-	padding-top: 15px;
-	// position: absolute;
-	top: 100%;
-	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
-	@include mt;
-	padding-bottom: 10px;
-	top: 0;
-	left: 0;
-	width: 100%;
+		@include media-breakpoint-up(xl) {
 
-	&.fixed {
-		width: 100vw;
-		bottom: auto;
-		margin-top: 0;
-		background-color: #fff;
+			padding-top: rem(34);
+			padding-bottom: rem(24);
+		}
+		padding-top: rem(10);
+	padding-bottom: rem(10);
+	 border-bottom: 1px solid #E0E0E0;
+	.row{
+		@include media-breakpoint-up(xxl) {
+			@include roww(rem(50))
+		}
 	}
+	&__logo{
+						@include media-breakpoint-up(xxl) {
+		 margin-right: rem(75);
+						}
+						img{
+							@include media-breakpoint-up(sm) {
+								max-width: rem(185);
+							}
+							max-width: rem(122);
+							// max-width: 100%;
+		 }
+	 }
+ 
 
-	&__nav {
-		text-align: center;
-		list-style-type: none;
+	&__constants{
+		// margin-right: rem(20);
 	}
-
-	&__item {
-		display: inline-block;
-		list-style-type: none;
-	}
-
 	// 
 	@include media-breakpoint-up(xl) {}
 
@@ -64,3 +79,71 @@
 
 	@include media-breakpoint-down(xs) {}
 }
+.btn-ticket{
+	@extend .btn;
+	@extend .btn-primary;
+
+	@include media-breakpoint-up(xl) {
+
+		width: rem(232);
+	}
+}
+.btn-lang {
+	@extend .btn;
+	@extend .btn-outline-primary;
+
+	padding: 0;
+	font-family: $font-family-base;
+	border-radius: 50%;
+	width: rem(42);
+	height: rem(42);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: $h5-font-size;
+}
+
+	.nav {
+		list-style-type: none;
+		margin-bottom: 0;
+			@include media-breakpoint-up(lg) {
+
+				columns: 2;
+			}
+		max-width: rem(336);
+		@extend .mono;
+		&__item {
+			width: 100%;
+			display: inline-block;
+			list-style-type: none;
+			margin-bottom: rem(11);
+		}
+	
+		&__link {
+			// @extend .text
+			color: $dark; 
+			border-bottom: 1px solid transparent;
+			display: inline-block;
+			@extend .h6;
+			margin-bottom: 0;
+			&:hover,
+			&.active{
+				border-bottom-color: currentColor;
+			}
+		}
+	}
+
+
+		.link-tel {
+			@extend .h2;
+			@extend .mono;
+			@extend .text-body;
+			display: inline-block;
+			letter-spacing: 0.06em;
+			line-height: (41 / 30);
+			margin-bottom: rem(5);
+		}
+
+		.link-mail {
+			@extend .h5;
+		}

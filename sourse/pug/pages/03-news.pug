@@ -3,18 +3,22 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sNews/_sNews.pug
 
 block variables
-	- let  mainPage= 'page-main'
+	- let  mainPage= null
 block title
-	- let  title= 'Главная'
+	- let  title= 'НОВОСТИ'
 	title= title
 block pagecontent
 	+mob-mnu()
 	+header()
 
-		+top-nav() 
-	+headerBlock()
+		+top-nav()
+	+b.page-head.container
+		h1= title
+
+	+sNews
 	+footer()
 
 
