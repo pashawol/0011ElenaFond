@@ -418,6 +418,15 @@ iframe {
 	@extend .mono;
 }
 
+.btn-pimary-frame{
+	@extend .btn;
+	@extend .btn-primary;
+
+	font-family: $mono;
+	font-size: rem(20px);
+	line-height: (27/20);
+}
+
 .page-head{
 	padding-top: rem(38);
 	padding-bottom: rem(36);
