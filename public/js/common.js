@@ -242,7 +242,29 @@ function eventHandler() {
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true
-	})); // modal window
+	}));
+	var headerSlider = new Swiper('.headerSlider-js', {
+		slidesPerView: 1,
+		loop: true,
+		// autoHeight: true,
+		spaceBetween: 0,
+		//nav
+		navigation: {
+			nextEl: '.headerSlider-next',
+			prevEl: '.headerSlider-prev'
+		},
+		//pugin
+		pagination: {
+			el: $(this).find('.headerSlider-pugin'),
+			clickable: true,
+			type: 'fraction'
+		},
+		//lazy
+		lazy: {
+			loadPrevNext: true //loadPrevNextAmount: 2,
+
+		}
+	}); // modal window
 }
 
 ;
