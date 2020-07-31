@@ -196,7 +196,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 
 	var screenName;
-	screenName = '03.jpg';
+	screenName = '07.png';
 	screenName ? $(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")) : ''; // /добавляет подложку для pixel perfect
 
 	function whenResize() {
@@ -243,6 +243,26 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+	//luckyone Js
+	//articals sliders
+
+	$(".sArticals__slider").each(function () {
+		var articalsSlider = new Swiper($(this).find(".arcticals-slider-js"), {
+			slidesPerView: 'auto',
+			spaceBetween: 25,
+			//nav
+			navigation: {
+				nextEl: $(this).find('.artical-slide-next'),
+				prevEl: $(this).find('.artical-slide-prev')
+			},
+			//lazy
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 5
+			} //
+
+		});
+	}); //end luckyone Js
 }
 
 ;

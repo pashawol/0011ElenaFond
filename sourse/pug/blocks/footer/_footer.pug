@@ -1,4 +1,44 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			+e.row.row
+				+e.col.col-lg-3.col-md-4.col-sm-6
+					+e.headline Фонд
+					+e.menu.two-cols-menu
+						ul
+							li: a(href='#') О фонде
+							li: a(href='#') Пресса
+							li: a(href='#') Новости
+							li: a(href='#') Документы
+							li: a(href='#') Проекты
+							li: a(href='#') Контакты
+							li: a(href='#') Афиша
+							li: a(href='#') Издания
+				+e.col.col-lg-3.col-md-4.col-sm-6
+					+e.headline Елена Образцова
+					+e.menu
+						ul
+							li: a(href='#') Биография
+							li: a(href='#') Фотографии
+							li: a(href='#') Награды
+							li: a(href='#') Репертуар
+				+e.col.col-lg-3.col-md-4.col-sm-6
+					+e.headline Проекты
+					+e.menu
+						ul
+							li: a(href='#') Творческая школа
+							li: a(href='#') Международные конкурсы
+							li: a(href='#') Премии фонда
+				+e.col.col-sm-6.col-md-12.col-lg-3.logo-col
+					+e.logo-cont
+						+e.A.logo-link(href='#')
+							img.lazy(src="#" data-src="img/svg/logo.svg" alt="")
+			+e.lower-row.row
+				+e.lower-col.col
+					+e.all-rights 2020 © Фонд Елены Образцовой
+				+e.lower-col.col-md-6.col-lg-auto
+					+e.A.tell(href="tel:+74992614292") +7 499 261 42 92
+				+e.lower-col.col-md-6.col-lg-auto
+					+e.A.mail(href="mailto:office@obraztsovafund.ru") office@obraztsovafund.ru
+				+e.lower-col.col-md-6.col-lg-auto
+					+e.A.addres(href="#") Москва, Старая Басманная ул., д. 18, стр. 1
