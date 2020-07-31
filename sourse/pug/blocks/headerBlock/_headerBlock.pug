@@ -20,11 +20,9 @@ mixin headerBlock()
 												.col
 													+e.nav
 														.headerSlider-prev
-															//- +icon('chevron-left')
 															img.swiper-lazy(src="#" data-src="img/chevron-left.svg", alt="")
 														.headerSlider-pugin
 														.headerSlider-next
-															//- +icon('chevron-right')
 															img.swiper-lazy(src="#" data-src="img/chevron-right.svg", alt="")
 												.col-auto
 													+e.btn.btn.btn-primary(href="#") Подробнее
@@ -33,11 +31,14 @@ mixin headerBlock()
 								+slide
 
 				+e.col.col
-					+pic('Elena.png')
-					h2 Елена Образцова
-					ul
-						li: a(href="#") Биография
-						li: a(href="#") Фото
-						li: a(href="#") Награды
-						li: a(href="#") Репертуар
+					+e.imgWrap
+						img.res-i(src="img/@2x/Elena.png", alt="")
+					//- +pic('Elena.png')
+					+e.content
+						h2 Елена Образцова
+						ul
+							li: a(href="#") Биография
+							li: a(href="#") Фото
+							li: a(href="#") Награды
+							li: a(href="#") Репертуар
 	// end headerBlock

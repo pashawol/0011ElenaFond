@@ -1,0 +1,46 @@
+// start .sTarget
+.sTarget {
+	padding-bottom: var(--sPB);
+	.h1 {
+		font-family: $mono;
+		margin-bottom: rem(30);
+		color: $primary;
+	}
+
+	p {
+		@extend .h4;
+	}
+
+	&__col {
+		padding-right: rem(101);
+
+		p {
+			max-width: rem(375);
+			margin-left: auto;
+			display: block;
+			border-left: solid 1px $primary;
+			padding-left: rem(50);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sTarget

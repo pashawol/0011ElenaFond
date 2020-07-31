@@ -3,6 +3,8 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sEvents/_sEvents.pug
+include ../blocks/sTarget/_sTarget.pug
 
 block variables
 	- let  mainPage= 'page-main'
@@ -15,6 +17,8 @@ block pagecontent
 
 		+top-nav() 
 	+headerBlock()
+	+sEvents()
+	+sTarget()
 	+footer()
 
 

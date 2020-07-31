@@ -1,0 +1,46 @@
+mixin eventCard(sl,i,date,title,text)
+	+b.eventCard&attributes(attributes)
+		picture
+			if sl
+				source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/event-${i}.webp` type="image/webp")
+				img.object-fit-js.swiper-lazy(src="#" data-src=`img/@2x/event-${i}.jpg`, alt="")
+			else
+				source.lazy(srcset="#" data-srcset=`img/@2x/webp/event-${i}.webp` type="image/webp")
+				img.object-fit-js.lazy(src="#" data-src=`img/@2x/event-${i}.jpg`, alt="")
+		+e.body
+			+e.date.h5(href="#")= date
+			+e.title.h5(href="#")= title
+			+e.place(href="#")= text
+			+e.btn.btn.btn-primary(href="#") Купить билеты
+
+mixin sEvents()
+	// start sEvents
+	+b.SECTION.sEvents.section#sEvents&attributes(attributes)
+		.container
+			.row
+				.col
+					+b.section-title
+						h2 ВАЖНЫЕ СОБЫТИЯ
+						+e.showAll(href="#") Смотреть все
+				.col
+					+e.controls
+						.eventSlider-prev
+							//- +icon('chevron-left')
+							img.lazy(src="#" data-src="img/chevron-left-brown.svg", alt="")
+						.eventSlider-next
+							//- +icon('chevron-right')
+							img.lazy(src="#" data-src="img/chevron-right-brown.svg", alt="")
+
+			+b.eventSlider
+				.swiper-container.eventSlider-js
+					.swiper-wrapper
+						.swiper-slide
+							+eventCard('sl','1','30 июня 2020','Под дугой колокольчик поет','Малый зал Московской консерватории')(class="eventCard--imgText")
+						.swiper-slide
+							+eventCard('sl','2','15 сентября 2020','Песни мира и войны','Малый зал Московской консерватории')
+						.swiper-slide
+							+eventCard('sl','3','12 июня 2020','Возвращение в детство','Малый зал Московской консерватории')
+						.swiper-slide
+							+eventCard('sl','4','6 июня 2020','Да здравствуют музы...!','Малый зал Московской консерватории')
+
+	// end sEvents

@@ -264,6 +264,42 @@ function eventHandler() {
 			loadPrevNext: true //loadPrevNextAmount: 2,
 
 		}
+	});
+	var eventSlider = new Swiper('.eventSlider-js', {
+		slidesPerView: 1,
+		loop: false,
+		// autoHeight: true,
+		spaceBetween: 0,
+		//nav
+		navigation: {
+			nextEl: '.eventSlider-next',
+			prevEl: '.eventSlider-prev'
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 40
+			},
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 81
+			}
+		},
+		//pugin
+		// pagination: {
+		// 	el: $(this).find('.eventSlider-pugin'),
+		// 	clickable: true,
+		// 	type: 'fraction',
+		// },
+		//lazy
+		lazy: {
+			loadPrevNext: true //loadPrevNextAmount: 2,
+
+		}
 	}); // modal window
 }
 
