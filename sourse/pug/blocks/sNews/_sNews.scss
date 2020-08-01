@@ -7,10 +7,12 @@
 			@include media-breakpoint-up(xxl) {
 				--bs-gutter-x: #{rem(106)};
 			}
-			padding-bottom: 40px;
+			padding-bottom: 44px;
 		}
 
-		
+		&__show-more-btn {
+		min-width: 232px;
+	}
 		
 
 		 
@@ -44,13 +46,14 @@
 	&__img-wrap{
 		background-color: #000;
 		display: block;
-		margin-bottom: 29px;
+		margin-bottom: 30px;
 	}
 
 	&__date {
 		margin-bottom: 15px;
 		font-size: 20px;
 		color: $primary;
+		line-height: (25 / 20);
 	}
 
 	&__title {
@@ -63,13 +66,19 @@
 			text-decoration-line: underline;
 			// border-bottom: 1px solid $primary;
 			font-family: $mono;
+			@include media-breakpoint-down(md) {
+				font-size: 16px;
+			}
 		}
 	}
 
 	&__text {
 		font-family: $default-font;
 		font-size: 20px;
+		line-height: (32 / 20);
 	}
+
+	
 
 
 }

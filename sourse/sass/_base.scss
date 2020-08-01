@@ -13,6 +13,7 @@ html {
 	width: 100%;
 	height: 100%;
 	background-position: center 0;
+	// background-position: center 11px;
 	opacity: 0;
 	// opacity: 0.7;
 }
@@ -417,6 +418,15 @@ iframe {
 	@extend .mono;
 }
 
+.btn-pimary-frame{
+	@extend .btn;
+	@extend .btn-primary;
+
+	font-family: $mono;
+	font-size: rem(20px);
+	line-height: (27/20);
+}
+
 .page-head{
 	padding-top: rem(38);
 	padding-bottom: rem(36);
@@ -425,5 +435,11 @@ iframe {
 		@extend .mono;
 		@extend .ttu;
 		letter-spacing: 0.06em;
+	}
+}
+
+.section-title {
+	h2 {
+		@extend .mono;
 	}
 }
