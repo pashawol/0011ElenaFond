@@ -186,7 +186,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	let screenName;
-	screenName = '07.png';
+	screenName = '04.jpg';
 	screenName
 		? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
 		: '';
@@ -280,9 +280,7 @@ function eventHandler() {
 		slidesPerView: 1,
 		loop: false,
 		// autoHeight: true,
-		spaceBetween: 0,
-
-
+		spaceBetween: 10,
 		//nav
 		navigation: {
 			nextEl: '.eventSlider-next',
@@ -305,13 +303,39 @@ function eventHandler() {
 				spaceBetween: 81,
 			}
 		},
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			//loadPrevNextAmount: 2,
+		},
+	});
 
-		//pugin
-		// pagination: {
-		// 	el: $(this).find('.eventSlider-pugin'),
-		// 	clickable: true,
-		// 	type: 'fraction',
-		// },
+	let partnerSlier = new Swiper('.partnerSlier-js', {
+		slidesPerView: 3,
+		loop: true,
+		spaceBetween: 0,
+		//nav
+		navigation: {
+			nextEl: '.partnerSlier-next',
+			prevEl: '.partnerSlier-prev',
+		},
+
+		breakpoints: { 
+			576: { 
+				slidesPerView: 4,
+				spaceBetween: 10,
+			},
+			
+			992: { 
+				slidesPerView: 5,
+				spaceBetween: 20
+			},
+
+			1200: {
+				slidesPerView: 6,
+				spaceBetween: 42,
+			}
+		},
 		//lazy
 		lazy: {
 			loadPrevNext: true,

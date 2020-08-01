@@ -22,26 +22,38 @@
 		overflow: hidden;
 		background-color: #fff;
 		border-left: solid 1px #e0e0e0;
-		padding-left: rem(354);
-		padding-top: rem(400);
+		padding-left: rem(200);
+		@include media-breakpoint-up(xxl) {
+			padding-left: rem(336);
+		}
+		padding-top: rem(357);
 		margin-top: rem(-400);
 	}
 
 	&__imgWrap {
 		position: absolute;
 		left: -40%;
-		bottom: -20%;
+		bottom: -10%;
 		z-index: 1;
 	}
 
-	ul {
-		li {
-			list-style: none;
+	li {
+		list-style: none;
+		margin-bottom: rem(8);
+		@extend .h5;
+		a {
+			line-height: 1.5;
+			border-bottom: solid 2px transparent;
+			&:hover {
+				border-bottom: solid 2px $primary;
+			}
 		}
 	}
 
 	h2 {
 		font-family: $mono;
+		line-height: 1.4;
+		margin-bottom: rem(30);
 	}
 
 	@include media-breakpoint-up(xl) {}
@@ -67,7 +79,7 @@
 // end.headerBlock
 
 .headerSlider {
-
+	padding-bottom: rem(61);
 	&__slide {
 		position: relative;
 		padding: rem(120) rem(63) rem(90) rem(150);
@@ -87,17 +99,28 @@
 		display: flex;
 		align-items: center;
 		max-width: rem(170);
+		position: relative;
+		z-index: 2;
 	}
 
 	.h1 {
 		color: #fff;
 		margin-bottom: rem(69);
 		font-family: $mono;
-		max-width: rem(834px);
+		max-width: rem(750px);
+		position: relative;
+		z-index: 2;
 	}
 
 	&-pugin {
 		color: #fff;
 		text-align: center;
+		font-family: $mono;
+		font-size: rem(20);
+	}
+
+	&__btn {
+		position: relative;
+		z-index: 2;
 	}
 }
