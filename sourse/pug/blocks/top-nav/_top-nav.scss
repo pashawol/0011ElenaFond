@@ -24,8 +24,9 @@
 	padding-bottom: rem(10);
 	 border-bottom: 1px solid #E0E0E0;
 	.row{
-		@include media-breakpoint-up(xxl) {
-			@include roww(rem(50))
+		@include media-breakpoint-up(xxxl) {
+			// @include roww(rem(50));
+			--bs-gutter-x: #{rem(50)};
 		}
 	}
 	&__logo{

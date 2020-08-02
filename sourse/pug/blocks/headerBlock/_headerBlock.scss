@@ -21,13 +21,13 @@
 	&__slCol {
 		position: relative;
 		@include media-breakpoint-up(xxxl)  {
-			padding-right: calc(4vw + 60px);
+			// padding-right: calc(4vw + 60px);
 		}
 	}
 
 	&__col {
 		@include media-breakpoint-up(xxxl) {
-			margin-left: -4vw;
+			// margin-left: -4vw;
 		}
 		position: relative;
 		z-index: 2;
@@ -97,8 +97,25 @@
 
 .headerSlider {
 	padding-bottom: rem(61);
+	// margin-left: ;
+	max-width: none;
+	margin-left: calc(-1 * (100vw - 150%) / 2);
+	margin-right: 30px;
 
 	.swiper-container {
+		&::after{
+			content: '';
+			position: absolute;
+			left: calc(100%  + 40px);
+			height: 100%;
+			width: 100vw;
+			background-color: #ffffff;
+			top: 0;
+			z-index: 2;
+		}
+		@include media-breakpoint-up(xxl) {
+			// overflow: hidden;
+		}
 		overflow: visible;
 	}
 
