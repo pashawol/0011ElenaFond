@@ -83,6 +83,7 @@
 			}
 		}
 		.eventCard {
+			height: calc(100% - #{rem(50)});
 			margin-bottom: rem(50);
 		}
 	}

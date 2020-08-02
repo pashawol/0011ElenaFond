@@ -253,7 +253,7 @@ function eventHandler() {
 		slidesPerView: 1,
 		loop: true,
 		// autoHeight: true,
-		spaceBetween: 0,
+		spaceBetween: 200,
 		//nav
 		navigation: {
 			nextEl: '.headerSlider-next',
