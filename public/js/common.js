@@ -202,7 +202,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 
 	var screenName;
-	screenName = '04.jpg';
+	screenName = 'main.jpg';
 	screenName ? $(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")) : ''; // /добавляет подложку для pixel perfect
 
 	function whenResize() {
@@ -253,7 +253,7 @@ function eventHandler() {
 		slidesPerView: 1,
 		loop: true,
 		// autoHeight: true,
-		spaceBetween: 0,
+		spaceBetween: 200,
 		//nav
 		navigation: {
 			nextEl: '.headerSlider-next',

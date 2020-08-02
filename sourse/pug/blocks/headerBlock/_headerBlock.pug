@@ -1,9 +1,9 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
+		.container-fluid
 			.row
-				.col-lg-8
+				+e.slCol.col-lg-8
 					//- slider
 					+b.headerSlider
 						.swiper-container.headerSlider-js
@@ -30,7 +30,7 @@ mixin headerBlock()
 								+slide
 								+slide
 
-				+e.col.col
+				+e.col.col-lg-4
 					+e.imgWrap
 						img.res-i(src="img/@2x/Elena.png", alt="")
 					//- +pic('Elena.png')
