@@ -16,29 +16,27 @@ mixin headerBlock()
 												source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/headerBlock-sl.webp` type="image/webp")
 												img.object-fit-js.img-bg.swiper-lazy(src="#" data-src=`img/@2x/headerBlock-sl.jpg`, alt="")
 											.h1 Муждународный конкурс &laquo;Хосе Каррерас Гран-При&raquo;
-											.row.justify-content-between
-												.col
-													+e.nav
-														.headerSlider-prev
-															img.swiper-lazy(src="#" data-src="img/chevron-left.svg", alt="")
-														.headerSlider-pugin
-														.headerSlider-next
-															img.swiper-lazy(src="#" data-src="img/chevron-right.svg", alt="")
-												.col-auto
-													+e.btn.btn.btn-primary(href="#") Подробнее
+											+e.btn.btn.btn-primary(href="#") Подробнее
 								+slide
 								+slide
 								+slide
+						+e.nav
+							.headerSlider-prev
+								img(src="img/chevron-left.svg", alt="")
+							.headerSlider-pugin
+							.headerSlider-next
+								img(src="img/chevron-right.svg", alt="")
 
 				+e.col.col-lg-4
-					+e.imgWrap
-						img.res-i(src="img/@2x/Elena.png", alt="")
-					//- +pic('Elena.png')
-					+e.content
-						h2 Елена Образцова
-						ul
-							li: a(href="#") Биография
-							li: a(href="#") Фото
-							li: a(href="#") Награды
-							li: a(href="#") Репертуар
+					+e.contentWrapper
+						+e.imgWrap
+							img.res-i(src="img/@2x/Elena.png", alt="")
+						//- +pic('Elena.png')
+						+e.content
+							h2 Елена Образцова
+							ul
+								li: a(href="#") Биография
+								li: a(href="#") Фото
+								li: a(href="#") Награды
+								li: a(href="#") Репертуар
 	// end headerBlock
