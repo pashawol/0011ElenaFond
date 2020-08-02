@@ -43,7 +43,9 @@
 
 	&__row{
 		padding-bottom: rem(30);
+		flex-direction: column-reverse;
 		@include media-breakpoint-up(lg){
+			flex-direction: row;
 			@include roww(32px);
 			padding-bottom: rem(16);
 		}
@@ -115,8 +117,10 @@
 	}
 	&__portait-col{
 		margin-top: rem(150);
+		margin-bottom: rem(30);
 		@include media-breakpoint-up(lg){
 			margin-top: rem(260);
+			margin-bottom: 0;
 		}
 
 		@include media-breakpoint-up(xxxl){
