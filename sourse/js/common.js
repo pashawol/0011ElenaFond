@@ -277,10 +277,12 @@ function eventHandler() {
 	});
 
 	let eventSlider = new Swiper('.eventSlider-js', {
-		slidesPerView: 1,
+		// slidesPerView: 1,
+		// watchOverflow: true,
+		freeMode: true,
 		loop: false,
 		// autoHeight: true,
-		spaceBetween: 10,
+		spaceBetween: 20,
 		//nav
 		navigation: {
 			nextEl: '.eventSlider-next',
@@ -313,7 +315,7 @@ function eventHandler() {
 	let partnerSlier = new Swiper('.partnerSlier-js', {
 		slidesPerView: 3,
 		loop: true,
-		spaceBetween: 0,
+		spaceBetween: 5,
 		//nav
 		navigation: {
 			nextEl: '.partnerSlier-next',

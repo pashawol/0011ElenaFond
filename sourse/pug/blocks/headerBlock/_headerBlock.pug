@@ -3,7 +3,7 @@ mixin headerBlock()
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
 			.row
-				+e.slCol.col-lg-8
+				+e.slCol.col-lg-10.col-xl-9.col-xxxl-8
 					//- slider
 					+b.headerSlider
 						.swiper-container.headerSlider-js
@@ -27,7 +27,7 @@ mixin headerBlock()
 							.headerSlider-next
 								img(src="img/chevron-right.svg", alt="")
 
-				+e.col.col-lg-4
+				+e.col.col-lg-2.col-xl-3.col-xxxl-4
 					+e.contentWrapper
 						+e.imgWrap
 							img.res-i(src="img/@2x/Elena.png", alt="")
