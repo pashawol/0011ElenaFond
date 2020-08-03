@@ -277,10 +277,12 @@ function eventHandler() {
 	});
 
 	let eventSlider = new Swiper('.eventSlider-js', {
-		slidesPerView: 1,
+		// slidesPerView: 1,
+		// watchOverflow: true,
+		freeMode: true,
 		loop: false,
 		// autoHeight: true,
-		spaceBetween: 10,
+		spaceBetween: 20,
 		//nav
 		navigation: {
 			nextEl: '.eventSlider-next',
@@ -313,7 +315,7 @@ function eventHandler() {
 	let partnerSlier = new Swiper('.partnerSlier-js', {
 		slidesPerView: 3,
 		loop: true,
-		spaceBetween: 0,
+		spaceBetween: 5,
 		//nav
 		navigation: {
 			nextEl: '.partnerSlier-next',
@@ -348,6 +350,11 @@ function eventHandler() {
 	//luckyone Js
 	//articals sliders
 	$(".sArticals__slider").each(function () {
+		console.log(this);
+		console.log(this.querySelector('.arcticals-slider-js'));
+		console.log(this.querySelector('.artical-slide-next'));
+		console.log(this.querySelector('.artical-slide-prev'));
+		console.log('//');
 		let articalsSlider = new Swiper($(this).find(".arcticals-slider-js"), {
 			slidesPerView: 'auto',
 			spaceBetween: 25,
@@ -360,7 +367,7 @@ function eventHandler() {
 			//lazy
 			lazy: {
 				loadPrevNext: true,
-				loadPrevNextAmount: 5,
+				loadPrevNextAmount: 8,
 			},
 			//
 
@@ -413,13 +420,13 @@ function eventHandler() {
 		//days.innerHTML = Math.floor(timeLeft / 60 / 60 / 24);
 		//timeLeft = ((timeLeft / 60 / 60 / 24) - Math.floor(timeLeft / 60 / 60 / 24)) * 60 * 60 * 24;
 
-		hours.innerHTML = Math.floor(timeLeft / 60 / 60);
+		hours.innerHTML = addZero(Math.floor(timeLeft / 60 / 60));
 		timeLeft = ((timeLeft / 60 / 60) - Math.floor(timeLeft / 60 / 60)) * 60 * 60;
 
-		minutes.innerHTML = Math.floor((timeLeft / 60));
+		minutes.innerHTML = addZero(Math.floor((timeLeft / 60)));
 		timeLeft = ((timeLeft / 60) - Math.floor((timeLeft / 60))) * 60;
 
-		seconds.innerHTML = Math.floor(timeLeft);
+		seconds.innerHTML = addZero(Math.floor(timeLeft));
 	}
 
 	function getTime(htmlEl, currentTimeItem) {
@@ -437,7 +444,14 @@ function eventHandler() {
 	$(".sAboutFond__parners-slider").each(function () {
 		let articalsSlider = new Swiper($(this).find(".partners-slider-js"), {
 			slidesPerView: 'auto',
-			spaceBetween: 32,
+			breakpoints: {
+				768: {
+					spaceBetween: 32,
+				},
+				320 : {
+					spaceBetween: 16,
+				},
+			},
 
 			//lazy
 			lazy: {
@@ -454,8 +468,14 @@ function eventHandler() {
 		});
 	});
 
-	let str1 = 'ПАРТНЕРЫ ФОНДА';
-	console.log(str1.toLocaleLowerCase());
+	function addZero(num) {
+		num = Number(num);
+		if (num >= 0 && num <=9) {
+			num = "0" + num;
+		}
+		return num
+	}
+
 	//end luckyone Js
 };
 if (document.readyState !== 'loading') {

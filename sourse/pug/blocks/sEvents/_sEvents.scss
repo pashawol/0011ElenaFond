@@ -111,10 +111,11 @@
 .eventSlider {
 	.swiper-container{
 		overflow: visible;
-		max-width: 1553px;
+		@include media-breakpoint-up(sm){
+			max-width: 1553px;
+		}
+		max-width: 80vw;
 		margin-left: 0;
 	}
 
-	.swiper-wrapper {
-	}
 }
