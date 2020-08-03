@@ -56,6 +56,12 @@
 			vertical-align: top;
 		}
 
+		tr{
+			@include media-breakpoint-down(sm) {
+				padding-bottom: rem(7);
+			}
+		}
+
 		&__label{
 			display: inline-block;
 			padding: rem(6) rem(19);
