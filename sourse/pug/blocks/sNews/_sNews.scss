@@ -1,7 +1,7 @@
 
 	// start .sNews
 	.sNews {
-		padding-top: 0px;
+		padding-top: 0;
 
 		.row{
 			@include media-breakpoint-up(xxl) {
@@ -14,11 +14,11 @@
 		}
 
 		&__show-more-btn {
-		min-width: 232px;
-		margin-top: 44px;
+		min-width: rem(232);
+		margin-top: rem(44);
 		@include media-breakpoint-down(md) {
 			margin-top: 0;
-			margin-bottom: 50px;
+			margin-bottom: rem(50);
 		}
 	}
 		
@@ -49,43 +49,44 @@
 
 .item-news {
 
-	margin-bottom: 66px;
+	margin-bottom: rem(66);
 	margin-right: auto;
 	margin-left: auto;
-	max-width: 464px;
+	max-width: rem(464);
 
 	&__img-wrap{
 		background-color: #000;
 		display: block;
-		margin-bottom: 30px;
+		margin-bottom: rem(30);
 	}
 
 	&__date {
-		margin-bottom: 15px;
-		font-size: 20px;
+		margin-bottom: rem(15);
+		font-size: rem(20);
 		color: $primary;
 		line-height: (25 / 20);
 	}
 
 	&__title {
-		margin-bottom: 16px;
+		margin-bottom: rem(16);
 		a {
 			text-transform: uppercase;
-			font-size: 20px;
+			font-size: rem(20);
 			line-height: 1.6;
 			letter-spacing: 0.06em;
 			// text-decoration-line: underline;
 			border-bottom: 1px solid $primary;
-			font-family: $mono;
+			@extend .mono;
+
 			@include media-breakpoint-down(md) {
-				font-size: 16px;
+				font-size: rem(16);
 			}
 		}
 	}
 
 	&__text {
 		font-family: $default-font;
-		font-size: 20px;
+		font-size: rem(20);
 		line-height: (32 / 20);
 	}
 
