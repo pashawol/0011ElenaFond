@@ -41,7 +41,11 @@
 		}
 
 		td{
-			padding-bottom: rem(11);
+			@include media-breakpoint-down(sm) {
+				padding-bottom: 0;
+			}
+			
+			padding-bottom: 11px;
 			line-height: (26 / 16);
 			font-weight: bold;
 			&:not(:last-child){
