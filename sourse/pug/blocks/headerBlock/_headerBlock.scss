@@ -108,7 +108,7 @@
 			bottom: -3%;
 		}
 		@include media-breakpoint-up(xl) {
-			bottom: -12%;
+			bottom: -16%;
 			width: 135%;
 			left: rem(-190);
 		}
@@ -173,6 +173,14 @@
 	padding-bottom: rem(10);
 	@include media-breakpoint-up(lg) {
 		padding-bottom: rem(61);
+		margin-left: calc(-1 * (100vw - 120%) / 2);
+		margin-right: 30px;
+	}
+	@include media-breakpoint-up(xl){
+		margin-left: calc(-1 * (100vw - 134%) / 2);
+	}
+	@include media-breakpoint-up(xxxl) {
+		// padding-bottom: rem(61);
 		margin-left: calc(-1 * (100vw - 150%) / 2);
 		margin-right: 30px;
 	}
@@ -202,7 +210,7 @@
 		position: relative;
 		padding: rem(60) rem(20) rem(120) rem(20);
 		@include media-breakpoint-up(sm) {
-			padding: rem(100) rem(40) rem(80) rem(120);
+			padding: rem(100) rem(60) rem(80) rem(90);
 		}
 		@include media-breakpoint-up(lg) {
 			padding: rem(120) rem(63) rem(90) rem(150);
