@@ -6,3 +6,4 @@
 1. <https://pashawol.github.io/0011ElenaFond/public/07-articals.html>
 1. <https://pashawol.github.io/0011ElenaFond/public/08-projects.html>
 1. <https://pashawol.github.io/0011ElenaFond/public/09-translations.html>
+1. <https://pashawol.github.io/0011ElenaFond/public/10-about-event.html>
